@@ -6,27 +6,39 @@ export function Skills() {
   const skillCategories = [
     {
       name: "LANGUAGES",
-      items: ["Java", "Python", "Embedded C", "JavaScript", "HTML/CSS", "SQL"]
+      items: ["Python", "Java", "JavaScript", "C", "C++", "SQL"]
     },
     {
-      name: "CYBERSECURITY",
-      items: ["Ethical Hacking", "Cryptography", "Network Security", "Vulnerability Assessment", "Penetration Testing"]
-    },
-    {
-      name: "IOT_HARDWARE",
-      items: ["Arduino IDE", "Arduino Uno", "ESP32", "ESP32-CAM", "Sensors & Actuators"]
+      name: "WEB_DEVELOPMENT",
+      items: ["ReactJS", "Node.js", "Django", "HTML", "CSS"]
     },
     {
       name: "DATABASES",
-      items: ["Firebase", "MongoDB", "PostgreSQL"]
+      items: ["MySQL", "PostgreSQL", "MongoDB", "Firebase"]
     },
     {
-      name: "FRAMEWORKS",
-      items: ["Django", "Java AWT", "Java Swing", "React", "Angular"]
+      name: "CLOUD_DEVOPS",
+      items: ["AWS", "Git", "GitHub"]
     },
     {
-      name: "TOOLS_OS",
-      items: ["Git/GitHub", "OpenCV", "Keil uVision", "Linux (Kali/Ubuntu)", "Windows"]
+      name: "CYBERSECURITY",
+      items: ["Ethical Hacking", "OWASP Top 10", "Penetration Testing", "Cryptography"]
+    },
+    {
+      name: "SECURITY_TOOLS",
+      items: ["Burp Suite", "Nmap", "Wireshark", "Metasploit", "Kali Linux"]
+    },
+    {
+      name: "NETWORKING",
+      items: ["TCP/IP", "Network Protocols", "Firewalling", "IDS/IPS"]
+    },
+    {
+      name: "OPERATING_SYSTEMS",
+      items: ["Kali Linux", "Ubuntu", "Windows"]
+    },
+    {
+      name: "AI_TOOLS",
+      items: ["LLM Integration", "Python Libraries", "Cursor", "Claude"]
     }
   ]
 

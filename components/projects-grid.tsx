@@ -7,8 +7,21 @@ import { Button } from "@/components/ui/button"
 import { projects } from "@/data/projects"
 import { motion } from "framer-motion"
 import { Github, ExternalLink, Terminal } from "lucide-react"
+import { isValidUrl, sanitizeText } from "@/lib/security"
 
 export function ProjectsGrid() {
+  // Filter and validate projects for security
+  const secureProjects = projects.filter(project => {
+    const hasValidDemo = !project.demo || isValidUrl(project.demo)
+    const hasValidRepo = !project.repo || isValidUrl(project.repo)
+    return hasValidDemo && hasValidRepo
+  }).map(project => ({
+    ...project,
+    title: sanitizeText(project.title),
+    description: sanitizeText(project.description),
+    tech: project.tech.map(t => sanitizeText(t))
+  }))
+
   return (
     <section id="projects" className="relative py-20 overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -23,13 +36,19 @@ export function ProjectsGrid() {
               // Accessing classified project files...
             </p>
           </div>
-          <a href="https://github.com/ManglamX" className="text-sm text-accent hover:text-accent/80 font-mono flex items-center gap-2">
+          <a 
+            href={isValidUrl("https://github.com/ManglamX") ? "https://github.com/ManglamX" : "#"} 
+            className="text-sm text-accent hover:text-accent/80 font-mono flex items-center gap-2"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="View all repositories on GitHub"
+          >
             [VIEW_ALL_REPOS] <Terminal className="w-4 h-4" />
           </a>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((p, index) => (
+          {secureProjects.map((p, index) => (
             <motion.div
               key={p.slug}
               initial={{ opacity: 0, y: 20 }}
@@ -42,7 +61,7 @@ export function ProjectsGrid() {
                   <div className="absolute inset-0 bg-primary/10 z-10 group-hover:bg-transparent transition-colors duration-300" />
                   <Image
                     src={p.image || "/placeholder.svg"}
-                    alt={p.title}
+                    alt={sanitizeText(p.title)}
                     fill
                     sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
@@ -72,16 +91,26 @@ export function ProjectsGrid() {
 
                 <CardFooter className="mt-auto pt-4 border-t border-primary/10">
                   <div className="flex items-center gap-3 w-full">
-                    {p.demo && (
+                    {p.demo && isValidUrl(p.demo) && (
                       <Button asChild size="sm" variant="ghost" className="flex-1 hover:bg-primary/20 hover:text-primary font-mono text-xs border border-transparent hover:border-primary/50">
-                        <a href={p.demo} target="_blank" rel="noopener noreferrer">
+                        <a 
+                          href={p.demo} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          aria-label={`View demo for ${p.title}`}
+                        >
                           <ExternalLink className="w-3 h-3 mr-2" /> DEMO
                         </a>
                       </Button>
                     )}
-                    {p.repo && (
+                    {p.repo && isValidUrl(p.repo) && (
                       <Button asChild size="sm" variant="ghost" className="flex-1 hover:bg-accent/20 hover:text-accent font-mono text-xs border border-transparent hover:border-accent/50">
-                        <a href={p.repo} target="_blank" rel="noopener noreferrer">
+                        <a 
+                          href={p.repo} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          aria-label={`View source code for ${p.title}`}
+                        >
                           <Github className="w-3 h-3 mr-2" /> CODE
                         </a>
                       </Button>

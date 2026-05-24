@@ -9,7 +9,7 @@
 
 **A cybersecurity-themed portfolio showcasing projects in Full-Stack Development, IoT, and Cybersecurity.**
 
-[🌐 Live Demo](https://manglam.me/) • [📧 Email](mailto:ecs.crce.10127@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/manglam-jaiswal-0b2822290)
+[🌐 Live Demo](https://manglam.me/) • [📧 Email](mailto:manglam.codes@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/manglam-jaiswal)
 
 </div>
 
@@ -168,8 +168,8 @@ ManglamX.github.io/
 6. And 4 more...
 
 ### Connect with me
-- 📧 Email: [ecs.crce.10127@gmail.com](mailto:ecs.crce.10127@gmail.com)
-- 💼 LinkedIn: [manglam-jaiswal-0b2822290](https://www.linkedin.com/in/manglam-jaiswal-0b2822290)
+- 📧 Email: [manglam.codes@gmail.com](mailto:manglam.codes@gmail.com)
+- 💼 LinkedIn: [manglam-jaiswal](https://www.linkedin.com/in/manglam-jaiswal)
 - 🐙 GitHub: [ManglamX](https://github.com/ManglamX)
 - 💻 HackerRank: [raaj_jaiswal1990](https://www.hackerrank.com/profile/raaj_jaiswal1990)
 - 🔧 LeetCode: [ManglamX](https://leetcode.com/u/ManglamX/)

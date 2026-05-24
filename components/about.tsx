@@ -5,10 +5,10 @@ import { Shield, Code, Cpu, Database } from "lucide-react"
 
 export function About() {
   const highlights = [
-    { icon: Code, text: "Full‑stack (React, Angular, Django, JS/TS)", color: "text-primary" },
-    { icon: Shield, text: "Cybersecurity (Ethical Hacking, Cryptography)", color: "text-accent" },
-    { icon: Cpu, text: "IoT & Hardware (ESP32/Arduino)", color: "text-primary" },
-    { icon: Database, text: "Databases (Firebase, MongoDB, PostgreSQL)", color: "text-accent" },
+    { icon: Code, text: "Full‑stack & AI", color: "text-primary" },
+    { icon: Shield, text: "Cybersecurity", color: "text-accent" },
+    { icon: Cpu, text: "IoT & Hardware", color: "text-primary" },
+    { icon: Database, text: "Databases", color: "text-accent" },
   ]
 
   return (
@@ -27,20 +27,25 @@ export function About() {
           <div className="grid md:grid-cols-2 gap-8 md:gap-12">
             <div className="space-y-4">
               <p className="leading-relaxed text-muted-foreground font-mono text-sm md:text-base">
-                I'm a third-year Bachelor of Engineering student at{" "}
-                <span className="text-primary">Fr. Conceicao Rodrigues College of Engineering</span>,
-                specializing in Electronics and Computer Science with Honors in{" "}
-                <span className="text-accent">Cybersecurity</span>.
+                I'm Manglam Jaiswal, a final year B.E. Electronics and Computer Science student at{" "}
+                <span className="text-primary">Fr. Conceicao Rodrigues College of Engineering</span>.
               </p>
               <p className="leading-relaxed text-muted-foreground font-mono text-sm md:text-base">
-                I have a strong interest in full-stack development, cybersecurity, and the Internet of Things (IoT).
-                Currently, I serve as the <span className="text-primary">IoT Lead at Project Cell</span>, where I guide
-                tech-driven projects focused on solving real-world problems.
+                My core strengths are:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-muted-foreground font-mono text-sm md:text-base ml-4">
+                <li>Problem solving and analytical thinking</li>
+                <li>Quick learning and adaptability</li>
+                <li>Team collaboration and self motivation</li>
+              </ul>
+              <p className="leading-relaxed text-muted-foreground font-mono text-sm md:text-base">
+                I am inclined towards <span className="text-accent">Cybersecurity</span>,{" "}
+                <span className="text-primary">IoT</span>, and{" "}
+                <span className="text-accent">Full Stack Development</span>, and I enjoy building practical projects in these domains using technologies like{" "}
+                <span className="text-primary">Python, JavaScript, Node.js, Java, Embedded C</span>, and related tools.
               </p>
               <p className="leading-relaxed text-muted-foreground font-mono text-sm md:text-base">
-                I've completed an internship at <span className="text-accent">Apraava Energy</span>, gaining practical
-                exposure to industry practices. I thrive in collaborative environments and am always eager to take on
-                new challenges.
+                I am always eager to learn, explore new technologies, and build impactful and secure solutions.
               </p>
 
               {/* Academic Performance */}
@@ -48,13 +53,13 @@ export function About() {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-xs font-mono text-muted-foreground">ACADEMIC_PERFORMANCE</div>
-                    <div className="text-2xl font-bold text-accent font-mono mt-1">9.15 / 10</div>
-                    <div className="text-xs font-mono text-muted-foreground mt-1">Recent CGPA</div>
+                    <div className="text-2xl font-bold text-accent font-mono mt-1">8.79 / 10</div>
+                    <div className="text-xs font-mono text-muted-foreground mt-1">Current CGPA</div>
                   </div>
                   <div className="text-accent">
                     <svg className="w-16 h-16" viewBox="0 0 100 100">
                       <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" opacity="0.2" />
-                      <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="283" strokeDashoffset="25.5" transform="rotate(-90 50 50)" />
+                      <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="283" strokeDashoffset="34.5" transform="rotate(-90 50 50)" />
                     </svg>
                   </div>
                 </div>

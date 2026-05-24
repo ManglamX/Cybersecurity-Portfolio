@@ -11,7 +11,7 @@ export function ContactDetails() {
         </div>
         <div>
           <dt className="text-sm text-muted-foreground">Location</dt>
-          <dd className="font-medium">Mumbai, Maharashtra</dd>
+          <dd className="font-medium">Mumbai, India</dd>
         </div>
         <div>
           <dt className="text-sm text-muted-foreground">Phone</dt>
@@ -24,8 +24,21 @@ export function ContactDetails() {
         <div>
           <dt className="text-sm text-muted-foreground">Email</dt>
           <dd className="font-medium">
-            <a href="mailto:ecs.crce.10127@gmail.com" className="underline underline-offset-4">
-              ecs.crce.10127@gmail.com
+            <a href="mailto:manglam.codes@gmail.com" className="underline underline-offset-4">
+              manglam.codes@gmail.com
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt className="text-sm text-muted-foreground">Website</dt>
+          <dd className="font-medium">
+            <a
+              href="https://manglam.me"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              manglam.me
             </a>
           </dd>
         </div>
@@ -33,12 +46,12 @@ export function ContactDetails() {
           <dt className="text-sm text-muted-foreground">LinkedIn</dt>
           <dd className="font-medium">
             <a
-              href="https://www.linkedin.com/in/manglam-jaiswal-0b2822290"
+              href="https://www.linkedin.com/in/manglam-jaiswal"
               target="_blank"
               rel="noreferrer"
               className="underline underline-offset-4"
             >
-              linkedin.com/in/manglam-jaiswal-0b2822290
+              linkedin.com/in/manglam-jaiswal
             </a>
           </dd>
         </div>
@@ -52,6 +65,32 @@ export function ContactDetails() {
               className="underline underline-offset-4"
             >
               github.com/ManglamX
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt className="text-sm text-muted-foreground">TryHackMe</dt>
+          <dd className="font-medium">
+            <a
+              href="https://tryhackme.com/p/ManglamX"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              tryhackme.com/p/ManglamX
+            </a>
+          </dd>
+        </div>
+        <div>
+          <dt className="text-sm text-muted-foreground">LeetCode</dt>
+          <dd className="font-medium">
+            <a
+              href="https://leetcode.com/u/ManglamX"
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              leetcode.com/u/ManglamX
             </a>
           </dd>
         </div>

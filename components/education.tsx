@@ -8,22 +8,24 @@ export function Education() {
     {
       degree: "Bachelor of Engineering",
       field: "Electronics & Computer Science",
-      institution: "Fr. Conceicao Rodrigues College of Engineering (Mumbai University)",
-      period: "Expected 2027",
+      institution: "Fr. Conceicao Rodrigues College of Engineering, Bandra",
+      period: "Pursuing",
       special: "Honors in Cybersecurity",
-      cgpa: "Recent CGPA: 9.15 / 10",
+      cgpa: "CGPA: 8.79 / 10",
       icon: Award,
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
+      degree: "Higher Secondary Certificate (H.S.C)",
       institution: "St. Michael's Convent School",
-      period: "2021 – 2023",
+      period: "2023",
+      score: "70.2%",
       icon: GraduationCap,
     },
     {
-      degree: "Secondary School Certificate (SSC)",
+      degree: "Secondary School Certificate (S.S.C)",
       institution: "Fatima School",
-      period: "2009 – 2021",
+      period: "2021",
+      score: "77%",
       icon: GraduationCap,
     },
   ]
@@ -66,6 +68,12 @@ export function Education() {
                         <div className="mt-2 inline-flex items-center gap-2 text-xs font-mono text-primary border border-primary/30 px-3 py-1 rounded bg-primary/5">
                           <Award className="w-3 h-3" />
                           {edu.cgpa}
+                        </div>
+                      )}
+                      {edu.score && (
+                        <div className="mt-2 inline-flex items-center gap-2 text-xs font-mono text-primary border border-primary/30 px-3 py-1 rounded bg-primary/5">
+                          <Award className="w-3 h-3" />
+                          {edu.score}
                         </div>
                       )}
                       {edu.special && (

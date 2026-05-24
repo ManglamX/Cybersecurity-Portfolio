@@ -125,7 +125,7 @@ export function CyberHero() {
 
                     <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 font-mono">
                         <span className="text-primary">&lt;</span>
-                        <span className="text-accent">FullStackDeveloper</span>
+                        <span className="text-accent">FullStack</span>
                         <span className="text-primary"> /&gt;</span>
                         {" | "}
                         <span className="text-primary">&lt;</span>
@@ -133,7 +133,7 @@ export function CyberHero() {
                         <span className="text-primary"> /&gt;</span>
                         {" | "}
                         <span className="text-primary">&lt;</span>
-                        <span className="text-accent">IoT_Specialist</span>
+                        <span className="text-accent">IoT</span>
                         <span className="text-primary"> /&gt;</span>
                     </p>
 

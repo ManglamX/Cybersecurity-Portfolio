@@ -7,13 +7,13 @@ export function HeroResume() {
         <h1 className="text-3xl lg:text-5xl font-bold tracking-tight text-balance">MANGLAM JAISWAL</h1>
         <p className="mt-3 text-muted-foreground">
           Mumbai, Maharashtra · +91 8052615183 ·{" "}
-          <a href="mailto:ecs.crce.10127@gmail.com" className="underline underline-offset-4">
-            ecs.crce.10127@gmail.com
+          <a href="mailto:manglam.codes@gmail.com" className="underline underline-offset-4">
+            manglam.codes@gmail.com
           </a>
         </p>
         <p className="mt-1 text-muted-foreground">
           <a
-            href="https://www.linkedin.com/in/manglam-jaiswal-0b2822290"
+            href="https://www.linkedin.com/in/manglam-jaiswal"
             target="_blank"
             rel="noreferrer"
             className="underline underline-offset-4"

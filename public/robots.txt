@@ -1,0 +1,23 @@
+# robots.txt for manglam.me
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://manglam.me/sitemap.xml
+
+# Disallow admin or private paths (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all search engines to crawl
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Crawl delay (optional)
+Crawl-delay: 1

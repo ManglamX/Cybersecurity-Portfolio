@@ -7,25 +7,25 @@ import { Briefcase, Calendar } from "lucide-react"
 export function Experience() {
   const experiences = [
     {
-      title: "IoT Lead",
-      company: "Project Cell CRCE",
-      location: "Fr. Conceicao Rodrigues College of Engineering, Mumbai",
-      period: "June 2025 – Present",
+      title: "Intern",
+      company: "Apraava Energy",
+      location: "On-site",
+      period: "Jun 2025 – Jul 2025",
       responsibilities: [
-        "Leading IoT initiatives and technical projects within the college's council project cell",
-        "Mentoring junior students in IoT development and hardware programming",
-        "Coordinating between different technical teams for project execution",
+        "Contributed to the AMI (Advanced Metering Infrastructure) project by working on WFM, HES, and MDM platforms for data validation, entry, and inventory management",
+        "Gained end-to-end exposure to smart meter data flow, lab testing, field operations, network management, and corporate workflows",
+        "Utilized Microsoft Excel and Data Analysis skills for processing and managing metering infrastructure data",
       ],
     },
     {
-      title: "Intern",
-      company: "Apraava Energy",
-      location: "Rajkot, Gujarat",
-      period: "Jan 2025 – July 2025",
+      title: "IoT Programming Engineer Intern",
+      company: "NCC Telecom Pvt. Ltd.",
+      location: "Mumbai",
+      period: "Dec 2025 – Feb 2026",
       responsibilities: [
-        "Assisted in the AMI (Advanced Metering Infrastructure) project, working on WFM, HES, and MDM platforms for data validation, data entry, and inventory management",
-        "Gained end‑to‑end exposure to smart meter data flow through lab testing, field operations, and network management",
-        "Learned and applied corporate workflows and operational practices in the energy sector",
+        "Programmed and configured IoT-based automation devices for smart home systems",
+        "Assisted installation, testing, and troubleshooting across client locations",
+        "Supported demonstrations and maintained system records",
       ],
     },
   ]

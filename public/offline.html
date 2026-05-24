@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Manglam Jaiswal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #000;
+            color: #00ff41;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00ff41;
+        }
+
+        .divider {
+            height: 2px;
+            width: 100px;
+            background: linear-gradient(to right, #00ff41, #00b8ff);
+            margin: 20px auto;
+        }
+
+        p {
+            color: #888;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .code {
+            background: rgba(0, 255, 65, 0.1);
+            border: 1px solid rgba(0, 255, 65, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .code-line {
+            color: #00b8ff;
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+
+        button {
+            background: #00ff41;
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: #00b8ff;
+            transform: scale(1.05);
+        }
+
+        .status {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">📡</div>
+        <h1>&lt;CONNECTION_LOST /&gt;</h1>
+        <div class="divider"></div>
+        
+        <p>
+            Unable to establish connection to the server.<br>
+            Please check your internet connection and try again.
+        </p>
+
+        <div class="code">
+            <div class="code-line"><span style="color: #00ff41;">&gt;</span> STATUS: OFFLINE</div>
+            <div class="code-line"><span style="color: #00ff41;">&gt;</span> ERROR_CODE: NET::ERR_INTERNET_DISCONNECTED</div>
+            <div class="code-line"><span style="color: #00ff41;">&gt;</span> CACHED_PAGES: AVAILABLE</div>
+        </div>
+
+        <button onclick="window.location.reload()">
+            RETRY_CONNECTION
+        </button>
+
+        <div class="status">
+            <span class="blink">●</span> Waiting for network...
+        </div>
+    </div>
+
+    <script>
+        // Auto-reload when connection is restored
+        window.addEventListener('online', () => {
+            window.location.reload();
+        });
+
+        // Check connection status
+        if (navigator.onLine) {
+            window.location.reload();
+        }
+    </script>
+</body>
+</html>

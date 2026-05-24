@@ -4,18 +4,60 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { profile } from "@/data/profile"
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Linkedin, FileDown, Terminal, Github, Code2, Braces, Shield } from "lucide-react"
+import { isValidUrl, sanitizeText } from "@/lib/security"
 
 export function Contact() {
+  // Validate all URLs before rendering
   const contactItems = [
-    { icon: Mail, label: "EMAIL", value: "ecs.crce.10127@gmail.com", href: "mailto:ecs.crce.10127@gmail.com" },
-    { icon: Phone, label: "PHONE", value: "+91 8052615183", href: "tel:+918052615183" },
-    { icon: MapPin, label: "LOCATION", value: "Mumbai, Maharashtra", href: null },
-    { icon: Linkedin, label: "LINKEDIN", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/manglam-jaiswal-0b2822290" },
-    { icon: Github, label: "GITHUB", value: "View GitHub Profile", href: "https://github.com/ManglamX" },
-    { icon: Code2, label: "HACKERRANK", value: "View HackerRank Profile", href: "https://www.hackerrank.com/profile/raaj_jaiswal1990" },
-    { icon: Braces, label: "LEETCODE", value: "View LeetCode Profile", href: "https://leetcode.com/u/ManglamX/" },
-    { icon: Shield, label: "TRYHACKME", value: "View TryHackMe Profile", href: "https://tryhackme.com/p/ManglamX" },
-  ]
+    { 
+      icon: Mail, 
+      label: "EMAIL", 
+      value: "manglam.codes@gmail.com", 
+      href: "mailto:manglam.codes@gmail.com" 
+    },
+    { 
+      icon: Phone, 
+      label: "PHONE", 
+      value: "+91 8052615183", 
+      href: "tel:+918052615183" 
+    },
+    { 
+      icon: MapPin, 
+      label: "LOCATION", 
+      value: sanitizeText("Mumbai, Maharashtra"), 
+      href: null 
+    },
+    { 
+      icon: Linkedin, 
+      label: "LINKEDIN", 
+      value: "Connect on LinkedIn", 
+      href: isValidUrl("https://www.linkedin.com/in/manglam-jaiswal") ? "https://www.linkedin.com/in/manglam-jaiswal" : null
+    },
+    { 
+      icon: Github, 
+      label: "GITHUB", 
+      value: "View GitHub Profile", 
+      href: isValidUrl("https://github.com/ManglamX") ? "https://github.com/ManglamX" : null
+    },
+    { 
+      icon: Code2, 
+      label: "HACKERRANK", 
+      value: "View HackerRank Profile", 
+      href: isValidUrl("https://www.hackerrank.com/profile/raaj_jaiswal1990") ? "https://www.hackerrank.com/profile/raaj_jaiswal1990" : null
+    },
+    { 
+      icon: Braces, 
+      label: "LEETCODE", 
+      value: "View LeetCode Profile", 
+      href: isValidUrl("https://leetcode.com/u/ManglamX/") ? "https://leetcode.com/u/ManglamX/" : null
+    },
+    { 
+      icon: Shield, 
+      label: "TRYHACKME", 
+      value: "View TryHackMe Profile", 
+      href: isValidUrl("https://tryhackme.com/p/ManglamX") ? "https://tryhackme.com/p/ManglamX" : null
+    },
+  ].filter(item => item.href !== null || item.href === null) // Keep all items but validate URLs
 
   return (
     <section id="contact" className="py-20">
@@ -94,7 +136,7 @@ export function Contact() {
                 ))}
               </div>
 
-              {profile.resumeUrl && (
+              {profile.resumeUrl && isValidUrl(profile.resumeUrl) && (
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -106,6 +148,7 @@ export function Contact() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-3 p-4 rounded border-2 border-accent/50 hover:border-accent hover:bg-accent/10 transition-all group mt-6"
+                    aria-label="Download Resume (opens in new tab)"
                   >
                     <FileDown className="w-5 h-5 text-accent group-hover:animate-bounce" />
                     <span className="font-mono text-accent font-bold">DOWNLOAD_RESUME.pdf</span>

@@ -10,34 +10,54 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "ghostesp-security-firmware",
-    title: "GhostESP — Wireless Security Testing Firmware",
+    slug: "vaultspend",
+    title: "VaultSpend – 100% Private Local-First Expense Tracker",
     description:
-      "Converts ESP32 into a wireless analysis and testing platform for Wi-Fi and BLE scanning. Performs packet monitoring, signal mapping, and controlled vulnerability testing. Designed for ethical security research and network hardening.",
-    tech: ["ESP32", "WiFi Security", "BLE", "Packet Analysis", "Ethical Hacking"],
-    repo: undefined,
+      "Privacy-first mobile expense tracker with zero cloud sync or telemetry. Features secure 6-digit PIN lock with rate-limiting, smart analytics with Chart.js, dark/light mode support, and manages daily expenses, income, bills, and budgets. Built with React, Ionic, and Capacitor for native mobile experience with local IndexedDB storage via Dexie.js. Includes encrypted backup/restore and local notifications.",
+    tech: ["React 19", "Ionic", "Capacitor", "Zustand", "Dexie.js", "Chart.js", "Android"],
+    repo: "https://github.com/ManglamX/VaultSpend",
     demo: undefined,
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop",
+    image: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&h=600&fit=crop",
+  },
+  {
+    slug: "cve-reranker",
+    title: "CVE ReRanker – AI-Powered Vulnerability Prioritization",
+    description:
+      "Ranked vulnerabilities based on the user's actual software inventory for better patch prioritization. Used AI trained on 200,000+ CVEs to analyze vulnerability descriptions and predict severity with 77% accuracy. Built a full web platform with CVE lookup, bulk upload, inventory analysis, and automated daily vulnerability updates.",
+    tech: ["AI/ML", "Python", "Web Platform", "CVE Analysis", "Vulnerability Management"],
+    repo: undefined,
+    demo: "https://cve-reranker.vercel.app",
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=600&fit=crop",
   },
   {
     slug: "esp-monitor-wifi-security",
-    title: "ESP Monitor — WiFi Security Monitor",
+    title: "ESP Monitor – Real-Time Wi-Fi Security Monitor",
     description:
-      "Real-time Wi-Fi security tool detecting deauthentication attacks and beacon spam. Analyzes channel activity with live graphs on a 1.47\" LCD and RGB LED indicators. Uses ESP32-C6, ST7789 LCD, and WS2812 RGB LED hardware.",
-    tech: ["ESP32-C6", "WiFi Security", "ST7789 LCD", "Real-time Monitoring"],
-    repo: "https://github.com/ManglamX/Cyber-Presentation",
+      "Monitored Wi-Fi networks in real time to detect deauthentication attacks and beacon spam. Displayed live wireless channel activity on an embedded LCD dashboard. Built a real-time monitoring system for analyzing and tracking network security events.",
+    tech: ["ESP32", "WiFi Security", "Real-time Monitoring", "Embedded Systems"],
+    repo: "https://github.com/ManglamX/ESP-Monitor",
     demo: undefined,
     image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=800&h=600&fit=crop",
   },
   {
-    slug: "pwdguard-password-security",
-    title: "PWDGuard — Password Security Suite",
+    slug: "stegavault",
+    title: "StegaVault – Steganography & Forensics Toolkit",
     description:
-      "Desktop app to check password strength, detect breach exposure, and generate secure passwords with password management. Chrome extension for auto-saving and auto-filling login credentials. Enhances user security and convenience by securely managing authentication data.",
-    tech: ["Desktop App", "Chrome Extension", "Security", "Password Management"],
-    repo: "https://github.com/ManglamX/PWDGuard",
+      "Hide secret messages inside normal files like images, audio, or documents without visible changes. Detect hidden data inside suspicious files with a confidence-based analysis system. Works fully offline on your computer with Web UI, CLI, and terminal dashboard support.",
+    tech: ["Steganography", "Python", "Forensics", "Web UI", "CLI"],
+    repo: "https://github.com/ManglamX/StegaVault",
     demo: undefined,
     image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?w=800&h=600&fit=crop",
+  },
+  {
+    slug: "nexushire",
+    title: "NexusHire – AI-Powered Recruitment Platform",
+    description:
+      "Recruiters get a 3D skill-match visualization, a live Kanban pipeline, instant high-match alerts, and one-click offer letter delivery. Candidates get a resume builder, a 3D job-fit graph with auto-apply, and an AI mock interview tailored to the role they applied for. Rejected candidates see exactly which skills cost them the role, with curated resources to close those gaps.",
+    tech: ["AI", "React", "3D Visualization", "Recruitment", "Node.js"],
+    repo: undefined,
+    demo: "https://nexushire.vercel.app",
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop",
   },
   {
     slug: "fixlit-smart-lighting",

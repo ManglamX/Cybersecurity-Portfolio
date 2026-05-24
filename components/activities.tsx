@@ -7,45 +7,17 @@ export function Activities() {
   const achievements = [
     {
       icon: Trophy,
-      title: "OWASP Hacker's Gambit CTF - Rank #48",
-      description: "Secured #48 rank out of 1700 participants in National Level CTF, demonstrating advanced cybersecurity problem-solving and competitive skills",
+      title: "Top 4% on TryHackMe Globally",
+      description: "Ranked in the top 4% of cybersecurity practitioners worldwide on TryHackMe platform, demonstrating advanced skills in penetration testing, threat detection, and security analysis",
       color: "text-yellow-500",
       highlight: true,
     },
     {
       icon: Shield,
-      title: "Breach Bytes 3.0 - Finalist",
-      description: "Finalist in Breach Bytes 3.0, a CTF competition of DJ Sanghvi College of Engineering",
+      title: "48th / 1700 in Hacker's Gambit OWASP National CTF",
+      description: "Secured 48th rank out of 1700 participants in OWASP National Level CTF competition, showcasing exceptional cybersecurity problem-solving and competitive skills",
       color: "text-accent",
       highlight: true,
-    },
-    {
-      icon: Award,
-      title: "IDFC First Bank Scholarship Recipient",
-      description: "Awarded Rs. 1 Lakh for academic excellence",
-      color: "text-yellow-500",
-      highlight: false,
-    },
-    {
-      icon: Target,
-      title: "Walk In Pitch 100X.VC 2024",
-      description: "Successfully pitched MistVision Project at startup competition",
-      color: "text-accent",
-      highlight: false,
-    },
-    {
-      icon: Trophy,
-      title: "Hackathon Participant",
-      description: "Active participant in college technical events, hackathons, and competitions",
-      color: "text-primary",
-      highlight: false,
-    },
-    {
-      icon: Shield,
-      title: "Technical Contributor",
-      description: "Contributed to projects with practical applications in Full‑stack, IoT, and Cybersecurity",
-      color: "text-primary",
-      highlight: false,
     },
   ]
 
