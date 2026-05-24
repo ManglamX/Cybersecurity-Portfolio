@@ -1,22 +1,17 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { Github } from "lucide-react"
 
 export function SiteHeader() {
-  const [mounted, setMounted] = useState(false)
   const { setTheme } = useTheme()
 
   useEffect(() => {
-    setMounted(true)
     setTheme("dark") // Force dark theme
   }, [setTheme])
-
-  if (!mounted) return null
 
   return (
     <header className="sticky top-0 z-50 border-b border-primary/30 bg-black/80 backdrop-blur-md">
